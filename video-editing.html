@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Editing Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    
+    /* Hero Section */
+    .hero-video-edit {
+      background: linear-gradient(135deg, rgba(30,64,175,1), rgba(124,58,237,1));
+      color: white;
+      padding: 120px 20px;
+      text-align: center;
+    }
+    .hero-video-edit h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    .hero-video-edit p {
+      font-size: 1.3rem;
+      margin-bottom: 30px;
+    }
+    .btn-back {
+      background-color: white;
+      color: #1e40af;
+      font-weight: 600;
+      padding: 12px 30px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .btn-back:hover {
+      background-color: #f0f0f0;
+      color: #1e40af;
+    }
+
+    /* Video Showcase */
+    .service-section { padding: 80px 0; }
+    .service-video {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-video:hover {
+      transform: scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+    }
+
+    /* Client Reviews */
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .testimonial-card:hover { transform: translateY(-5px); }
+    .testimonial-card p { font-size: 1rem; }
+    .testimonial-card strong { display: block; margin-top: 15px; color: #1e40af; }
+
+    /* Responsive */
+    @media (max-width:768px) {
+      .hero-video-edit h1 { font-size: 2.2rem; }
+      .hero-video-edit p { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero-video-edit">
+    <div class="container">
+      <h1>Professional Video Editing</h1>
+      <p>Reels Editing, Color Grading, Transitions, and More to Make Your Content Stand Out</p>
+      <a href="AI.html" class="btn btn-back">← Back to Home</a>
+    </div>
+  </section>
+
+  <!-- Video Showcase -->
+  <section class="service-section bg-light">
+    <div class="container">
+      <h2 class="section-title text-center">Our Work</h2>
+      <div class="row g-4">
+
+        <div class="col-md-6">
+          <video controls class="service-video">
+            <source src="videos/short 21 - Made with Clipchamp.mp4" type="video/mp4">
+          </video>
+          <h5 class="mt-3 text-center">Reel 1 Editing</h5>
+        </div>
+
+        <div class="col-md-6">
+          <video controls class="service-video">
+            <source src="videos/Untitled video - Made with Clipchamp (9).mp4" type="video/mp4">
+          </video>
+          <h5 class="mt-3 text-center">Reel 2 Editing</h5>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="service-section">
+    <div class="container">
+      <h2 class="section-title text-center">Client Reviews</h2>
+      <div class="row g-4">
+
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p>“Amazing editing! My reels engagement doubled.”</p>
+            <strong>- Client A</strong>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p>“Professional, fast, and creative editing.”</p>
+            <strong>- Client B</strong>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="testimonial-card text-center">
+            <p>“Highly recommend for anyone looking to improve their content.”</p>
+            <strong>- Client C</strong>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

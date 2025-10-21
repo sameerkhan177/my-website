@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sameer Khan - Video Editing & AI Automation</title>
+  <link rel="icon" href="images/favicon-32x32.png" type="image/png">
+
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #f9f9f9;
+    }
+
+    /* Navbar */
+    .navbar {
+      transition: background 0.4s;
+    }
+    .navbar.scrolled {
+      background-color: #1e40af !important;
+    }
+    .navbar-nav .nav-link {
+      color: white !important;
+      margin-right: 15px;
+      transition: color 0.3s, transform 0.2s;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #ffce00 !important;
+      transform: scale(1.05);
+    }
+
+    /* Hero Section */
+    header {
+      height: 100vh;
+      background: linear-gradient(rgb(23, 195, 180), rgb(5, 142, 166)), url('hero-bg.jpg') center/cover no-repeat;
+      color: rgb(225, 225, 225);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+    header .btn {
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      margin: 5px;
+    }
+
+    /* Section Titles */
+    .section-title {
+      color: #1e40af;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2rem;
+    }
+
+    /* Service Cards */
+    .card-service {
+      border: none;
+      border-radius: 15px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card-service:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    /* Portfolio Carousel */
+    .portfolio-item img {
+      border-radius: 15px;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    /* Testimonials */
+    .testimonial-card {
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    /* Floating AI Chatbot */
+    #chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 300px;
+      max-height: 400px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+    }
+    #chatbox-header {
+      background-color: #1e40af;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    #chatbox-body {
+      flex-grow: 1;
+      padding: 10px;
+      overflow-y: auto;
+    }
+    #chatbox-input {
+      display: flex;
+      border-top: 1px solid #ccc;
+    }
+    #chatbox-input input {
+      flex-grow: 1;
+      border: none;
+      padding: 10px;
+      outline: none;
+    }
+    #chatbox-input button {
+      background-color: #1e40af;
+      border: none;
+      color: white;
+      padding: 0 15px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #1e40af;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Sameer Khan</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Reviews</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header id="home">
+  <h1>Grow Your Brand with Engaging Reels & Smart Automation</h1>
+  <p>Professional Video Editing & AI Automation Services to save time and boost engagement</p>
+  <a href="#contact" class="btn btn-warning btn-lg">Hire Me</a>
+  <a href="#portfolio" class="btn btn-light btn-lg">See Portfolio</a>
+</header>
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Services</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card card-service p-4 text-center"> 
+          <i class="fa-solid fa-video fa-3x mb-3" style="color:#1e40af;"></i>
+          <h5  class="fw-bold"><a href="video-editing.html">Reels Editing</h5></a>
+          <p>Create viral Instagram & YouTube short-form videos that engage your audience.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-service p-4 text-center">
+          <i class="fa-solid fa-robot fa-3x mb-3" style="color:#1e40af;"></i>
+          <h5 class="fw-bold"><a href="ai automation.html"> AI Automation</h5></a>
+          <p>Automate Instagram engagement & capture leads with ManyChat and AI tools.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card card-service p-4 text-center">
+          <i class="fa-solid fa-cubes-stacked fa-3x mb-3" style="color:#1e40af;"></i>
+          <h5 class="fw-bold">Combo Packages</h5>
+          <p>Reels + AI Automation for maximum engagement & leads, perfect for growing brands.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Portfolio Carousel -->
+<section id="portfolio" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="section-title">Portfolio</h2>
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/ai demo.png"  class="d-block w-100 portfolio-item" alt="Reel 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/Screenshot 2025-07-15 174652.png"  class="d-block w-100 portfolio-item" alt="Reel 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/sameer profile.png " class="d-block w-100 portfolio-item" alt="Chatbot Demo">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="testimonials" class="py-5">
+  <div class="container">
+    <h2 class="section-title">Reviews</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner text-center">
+        <div class="carousel-item active">
+          <div class="testimonial-card mx-auto">
+            <p>"Sameer’s reels helped our brand grow engagement by 3x in just 1 month!"</p>
+            <h6 class="fw-bold mt-3">- Client </h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-card mx-auto">
+            <p>"The automation setup is genius — now leads come in automatically!"</p>
+            <h6 class="fw-bold mt-3">- Client </h6>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="section-title">Contact Me</h2>
+    <p>Email: <a href="mailto:sameerkhanedits@gmail.com">sameerkhanedits@gmail.com</a></p>
+    <a href="https://wa.me/6281502597" target="_blank" class="btn btn-warning btn-lg mt-2">Message Me on WhatsApp</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Sameer Khan. All Rights Reserved.</p>
+</footer>
+
+<!-- Floating AI Chatbot -->
+<div id="chatbox">
+  <div id="chatbox-header">Chat with Me <i class="fa-solid fa-chevron-down float-end"></i></div>
+  <div id="chatbox-body"></div>
+  <div id="chatbox-input">
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Navbar background on scroll
+  window.addEventListener('scroll', function() {
+    document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Example AI Chatbot JS
+  function sendMessage() {
+    const input = document.getElementById('userInput').value;
+    if (!input) return;
+    const messagesDiv = document.getElementById('chatbox-body');
+    messagesDiv.innerHTML += `<div><b>You:</b> ${input}</div>`;
+    messagesDiv.innerHTML += `<div><b>Bot:</b> Hello! You said: "${input}"</div>`;
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    document.getElementById('userInput').value = '';
+  }
+
+  // Chatbox toggle
+  const chatboxHeader = document.getElementById('chatbox-header');
+  const chatboxBody = document.getElementById('chatbox-body');
+  const chatboxInput = document.getElementById('chatbox-input');
+  chatboxHeader.addEventListener('click', () => {
+    if(chatboxBody.style.display === 'none') {
+      chatboxBody.style.display = 'block';
+      chatboxInput.style.display = 'flex';
+    } else {
+      chatboxBody.style.display = 'none';
+      chatboxInput.style.display = 'none';
+    }
+  });
+</script>
